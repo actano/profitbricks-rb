@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = "profitbricks"
-  s.version = "1.1.0.20130930123843"
+  s.version = "1.1.1.201411122044"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dominik Sander"]
-  s.date = "2013-09-30"
+  s.date = "2014-11-14"
   s.description = "A Ruby client for the ProfitBricks API."
   s.email = ["git@dsander.de"]
   s.executables = ["profitbricks"]
