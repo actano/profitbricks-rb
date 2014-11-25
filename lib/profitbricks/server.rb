@@ -149,11 +149,10 @@ module Profitbricks
       # @param [Hash] options currently just :id is supported
       # @option options [String] :id The id of the server to locate
       def find(options = {})
-        # FIXME
-        #if options[:name]
-        #  dc = PB::Server.all().select { |d| d.name == options[:name] }.first
-        #  options[:id] = dc.id if dc
-        #end
+        if options[:name]
+          dc = PB::Server.all().select { |d| d.name == options[:name] }.first
+          options[:id] = dc.id if dc
+        end
         raise "Unable to locate the server named '#{options[:name]}'" unless options[:id]
         response = Profitbricks.request :get_server, server_id: options[:id]
         PB::Server.new(response)
